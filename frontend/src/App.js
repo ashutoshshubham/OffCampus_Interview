@@ -13,6 +13,7 @@ import UserProvider from "./context/UserProvider";
 import UserAuth from "./auth/UserAuth"
 import All_Drives from "./components/main/All_Drives";
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -23,7 +24,8 @@ function App() {
             <Route element={<Home />} path='home' />
             <Route element={<Login />} path='login' />
             <Route element={<SignUp />} path='signup' />
-            <Route element={<All_Drives />} path='signup' />
+            <Route element={<All_Drives />} path='all_drives' />
+            
           </Route>
           <Route element={<UserAuth><User /></UserAuth>} path='user'/>
           <Route element={<User />} path='user'>
