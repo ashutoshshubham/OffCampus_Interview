@@ -2,7 +2,7 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import NavBar from './NavBar'
 
-const User = () => {
+const Company = () => {
     return (
         <div>
             <NavBar />
@@ -11,4 +11,4 @@ const User = () => {
     )
 }
 
-export default User
+export default Company

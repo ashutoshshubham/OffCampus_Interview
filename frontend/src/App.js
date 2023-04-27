@@ -5,13 +5,13 @@ import Main from "./components/main";
 import Login from "./components/main/Login";
 import Home from "./components/main/Home";
 import SignUp from "./components/main/SignUp";
-import User from "./components/user";
-import Add_jobs from "./components/user/Add_jobs";
-import User_profile from "./components/user/User_profile";
-import ManageJobs from "./components/user/ManageJobs";
+import Add_jobs from "./components/company/Add_jobs";
+import User_profile from "./components/company/User_profile";
+import ManageJobs from "./components/company/ManageJobs";
 import UserProvider from "./context/UserProvider";
 import UserAuth from "./auth/UserAuth"
 import All_Drives from "./components/main/All_Drives";
+import Company from "./components/company";
 
 
 function App() {
@@ -27,10 +27,10 @@ function App() {
             <Route element={<All_Drives />} path='all_drives' />
             
           </Route>
-          <Route element={<UserAuth><User /></UserAuth>} path='user'/>
-          <Route element={<User />} path='user'>
+          {/* <Route element={<UserAuth><Company /></UserAuth>} path='company'/> */}
+          <Route element={<Company />} path='company'>
             <Route element={<Add_jobs />} path='add_job' />
-            <Route element={<User_profile />} path='user_profile' />
+            <Route element={<Company_profile />} path='user_profile' />
             <Route element={<ManageJobs />} path='manage_job' />
           </Route>
         </Routes>
