@@ -70,10 +70,34 @@ const All_Drives = () => {
                                         </div>
                                         <div className="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
                                             <div className="d-flex flex-row align-items-center mb-1">
-                                                <h4 className="mb-1 me-1">{}</h4>
-
+                                                <h4 className="mb-1 me-1">Courses and Branches : {drive.course_branch}</h4>
                                             </div>
-                                            <div className="d-flex flex-column mt-4">
+                                            <div className="d-flex flex-row align-items-center mb-1">
+                                                <h4 className="mb-1 me-1">Batch : {drive.batch}</h4>
+                                            </div>
+                                            <div className="d-flex flex-row align-items-center mb-1">
+                                                <h4 className="mb-1 me-1">Salary : {drive.salary}</h4>
+                                            </div>
+                                            <div className="d-flex flex-row align-items-center mb-1">
+                                                <h4 className="mb-1 me-1">Designation : {drive.designation}</h4>
+                                            </div>
+                                            <div className="d-flex flex-row align-items-center mb-1">
+                                                <h4 className="mb-1 me-1">Roles and Responsibility : {drive.roles_responsibility}</h4>
+                                            </div>
+                                            <div className="d-flex flex-row align-items-center mb-1">
+                                                <h4 className="mb-1 me-1">Selection Process : {drive.selectionProcess}</h4>
+                                            </div>
+                                            <div className="d-flex flex-row align-items-center mb-1">
+                                                <h4 className="mb-1 me-1">Interview Location : {drive.interviewLocation}</h4>
+                                            </div>
+                                            <div className="d-flex flex-row align-items-center mb-1">
+                                                <h4 className="mb-1 me-1">Skills Required : {drive.skillsRequired}</h4>
+                                            </div>
+
+
+
+
+                                            {/* <div className="d-flex flex-column mt-4">
                                                 <Link to={`/user/book/${space._id}`} className="btn btn-primary btn-sm" type="button">
                                                     Book Now
                                                 </Link>
@@ -83,7 +107,7 @@ const All_Drives = () => {
                                                 >
                                                     More Details
                                                 </Link>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>
