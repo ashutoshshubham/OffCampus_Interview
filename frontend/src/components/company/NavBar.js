@@ -78,10 +78,13 @@ const NavBar = () => {
                             {/* <NavLink className="nav-link text-white" aria-current="page" to="/main/home">
                                 <b>HOME</b>
                             </NavLink> */}
-                            <NavLink className="nav-link text-white" aria-current="page" to="/user/add_job">
+                            <NavLink className="nav-link text-white" aria-current="page" to="/company/company_profile">
+                                <b>PROFILE</b>
+                            </NavLink>
+                            <NavLink className="nav-link text-white" aria-current="page" to="/company/add_job">
                                 <b>ADD JOBS</b>
                             </NavLink>
-                            <NavLink className="nav-link text-white" to="/user/manage_job">
+                            <NavLink className="nav-link text-white" to="/company/manage_job">
                                 <b>MANAGE JOBS</b>
                             </NavLink>
                             {/* <NavLink className="nav-link text-white" to="/user/profile">

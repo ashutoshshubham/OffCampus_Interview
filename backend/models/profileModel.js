@@ -7,8 +7,8 @@ const {Schema, model} = require('../connection');     //import connection.js fil
 
 const mySchema = new Schema({
     comp_name : String,
-    comp_contact : Number,
-    comp_email : String,
+    // comp_contact : Number,
+    comp_website : String,
     about_comp : String,
     user : {type : Types.ObjectId, ref : 'users'}
 })

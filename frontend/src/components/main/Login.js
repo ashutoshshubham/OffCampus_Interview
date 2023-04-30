@@ -36,7 +36,7 @@ const Login = () => {
             const data = await res.json();
             console.log(data);
             sessionStorage.setItem('user', JSON.stringify(data));
-            navigate('/user/')
+            navigate('/company')
             resetForm();
         }
         else if (res.status === 401) {
