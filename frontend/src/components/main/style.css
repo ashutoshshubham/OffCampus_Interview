@@ -23,3 +23,18 @@
 .login-card-position{
     padding-top: 170px;
 }
+
+
+
+
+.home-bg-image{
+    background-image: url('https://www.techrepublic.com/wp-content/uploads/2020/12/zoom-denisik11.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    height: 100vh
+}
+.home-text{
+    color: white;
+    padding-top: 27%;
+}

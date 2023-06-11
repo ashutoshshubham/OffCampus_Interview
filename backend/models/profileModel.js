@@ -6,6 +6,7 @@ const {Schema, model} = require('../connection');     //import connection.js fil
 
 
 const mySchema = new Schema({
+    jobs : {type : Types.ObjectId, ref : 'jobs'},
     comp_name : String,
     // comp_contact : Number,
     comp_website : String,

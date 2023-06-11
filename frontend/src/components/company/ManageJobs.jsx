@@ -5,7 +5,8 @@ const ManageJobs = () => {
 
     const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')))
     console.log(currentUser);
-
+    console.log(currentUser._id);
+    
     const [jobData, setJobData] = useState([])
     const [compData, setCompData] = useState([])
     // const [loading, setLoading] = useState(false)
@@ -13,6 +14,7 @@ const ManageJobs = () => {
     const fetchCompData = async () => {
         // setLoading(true);
         const res = await fetch('http://localhost:5000/profile/getbyuser/' + currentUser._id)
+        // const res = await fetch('http://localhost:5000/profile/getall')
         // setLoading(false);
         console.log(res.status)
         // console.log(currentUser._id)
@@ -26,13 +28,14 @@ const ManageJobs = () => {
 
     const fetchJobData = async () => {
         // setLoading(true);
-        const res = await fetch('http://localhost:5000/add_jobs/getbyuser/' + currentUser._id)
+        // const res = await fetch('http://localhost:5000/add_jobs/getbyuser/' + currentUser._id)
+        const res = await fetch('http://localhost:5000/add_jobs/getall')
         // setLoading(false);
         console.log(res.status)
         console.log(currentUser._id)
 
         if (res.status === 200) {
-            const data = await res.json();
+            const data = await res.json();+
             console.log(data)
             setJobData(data)
         }
@@ -42,12 +45,13 @@ const ManageJobs = () => {
 
     useEffect(() => {
         fetchCompData();
-        fetchJobData();
+        // fetchJobData();
     }, [])
 
 
     const displayDetails = () => {
-        if (jobData && compData) {
+        // if (jobData && compData) {
+        if (compData) {
             return (
                 <div>
                     {
@@ -58,17 +62,22 @@ const ManageJobs = () => {
                                     <div className="row">
                                         <div className="col-md-4 my-auto">
                                             <MDBAccordion>
-                                                <MDBAccordionItem collapseId={1}>
-                                                    <p>{comp.comp_name}</p>
+                                                <MDBAccordionItem collapseId={1} headerTitle={comp.comp_name}>
+                                                    {/* <p>Name : {comp}</p> */}
+                                                    <p>{comp._id}</p>
+                                                    <p>Official Website : {comp.comp_website}</p>
+                                                    <p>About Company : {comp.about_comp}</p>
                                                 </MDBAccordionItem>
                                             </MDBAccordion>
                                         </div>
                                         <div className="col-md-8">
-                                            <MDBAccordion>
-                                                <MDBAccordionItem collapseId={1} headerTitle='Accordion Item #1'>
-                                                    dfsfsdfsf
-                                                </MDBAccordionItem>
-                                            </MDBAccordion>
+                                            {/* {jobData.map((job) => ( */}
+                                                <MDBAccordion>
+                                                    <MDBAccordionItem collapseId={1} headerTitle={comp.jobs}>
+                                                    
+                                                    </MDBAccordionItem>
+                                                </MDBAccordion>
+                                            {/* ))} */}
                                         </div>
                                     </div>
                                 </div>

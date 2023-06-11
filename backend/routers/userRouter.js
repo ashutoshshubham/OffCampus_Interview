@@ -70,6 +70,16 @@ router.post('/authenticate', (req, res) => {
     });
 })
 
+router.get('/getbyuser/:userid', (req, res) => {
+    Model.find(req.params.userid)
+    .then((result) => {
+        res.json(result);
+    }).catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+})
+
 
 
 //delete data from database

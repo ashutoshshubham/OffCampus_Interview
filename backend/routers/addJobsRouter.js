@@ -96,8 +96,8 @@ router.get('/getbyid/:userid', (req, res) => {
     });
 })
 
-router.get('/getbyuser/:CompId', (req, res) => {
-    Model.find(req.params.CompId)
+router.get('/getbyuser/:Id', (req, res) => {
+    Model.find({user : req.params.Id})
     .then((result) => {
         res.json(result);
     }).catch((err) => {
